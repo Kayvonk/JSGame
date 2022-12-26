@@ -1,0 +1,168 @@
+body {
+  background-image: repeating-linear-gradient(
+    to right,
+    #363636,
+    #a05c41 100px,
+    #9198e5 100px,
+    #f59c29 100px
+  );
+  height: 100vh;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 200px;
+  color: white;
+  margin-bottom: 0;
+}
+
+header {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  z-index: 2;
+  top: 0;
+}
+
+
+#headerTarget {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: -10vw;
+}
+
+#startBtn {
+    width: 40%;
+  bottom: 0;
+  background-image: linear-gradient(
+    to right,
+    #02aab0 0%,
+    #00cdac 51%,
+    #02aab0 100%
+  );
+  margin: 2vw;
+  padding: 3vw 9vw;
+  text-align: center;
+  background-size: 200% auto;
+  color: white;
+  border: transparent;
+  box-shadow: 0 0 5px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+#startBtn:hover {
+  background-image: linear-gradient(
+    to right,
+    #027f83 0%,
+    #009b81 51%,
+    #008085 100%
+  );
+  box-shadow: 0 0 10px #eee;
+}
+
+#targets {
+  display: none;
+  position: relative;
+  height: 75%;
+  width: 75%;
+}
+
+.headerTarget {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.target {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.ring1 {
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  background-color: firebrick;
+  border-radius: 50%;
+}
+
+.ring2 {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.ring3 {
+  position: absolute;
+  width: 55%;
+  height: 55%;
+  background-color: firebrick;
+  border-radius: 50%;
+}
+
+.ring4 {
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.ring5 {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  background-color: firebrick;
+  border-radius: 50%;
+}
+
+.hideTarget {
+  display: none;
+}
+
+#startTimerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#startCountdown {
+  margin-top: 30vh;
+font-size: 200px;
+color: white;
+height:100%
+}
