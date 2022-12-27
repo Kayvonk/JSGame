@@ -31,11 +31,16 @@ arrayOfInsults = [
 const updateScore = () => {
   scoreDiv.textContent = "SCORE: " + score;
   hitsDiv.textContent = "HITS: " + hits;
-
   console.log(score);
 };
 
 const generateGameUi = () => {
+  localStoragehighScore = localStorage.getItem("High Score");
+  if (localStoragehighScore) {
+    highScore = localStoragehighScore;
+  } else {
+    highScore = 0;
+  }
   gameUiDiv.style = "display:none";
   scoreDiv.textContent = "SCORE: " + score;
   highScoreDiv.textContent = "HIGHSCORE: " + highScore;
@@ -112,6 +117,7 @@ const generateTargets = () => {
         highScore = score;
         console.log("score: " + score);
         console.log("highScore: " + highScore);
+        localStorage.setItem("High Score", highScore);
       }
       startTimerContainer.style = "display:none";
       targetsContainer.style = "display:none";
