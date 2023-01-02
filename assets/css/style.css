@@ -14,13 +14,36 @@ body {
   box-sizing: border-box;
 }
 
+#difficultyText {
+color: white;
+font-size: 16pt;
+font-family: Georgia, 'Times New Roman', Times, serif;  
+margin-bottom: 10px;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; 
+  width: 10vw;
+  padding: 30px 0;
+  font-size: 14pt;
+  display: flex;
+  justify-content: center;
+  /* height: 200px !important; */
+  text-align: center;
+  border-radius: 10pt 10pt 0  0;
+}
+
+
 main {
   position: relative;
+  flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   height: 100%;
+
 }
 
 h1 {
@@ -38,7 +61,6 @@ header {
   justify-content: center;
   align-items: center;
   width: 75%;
-  z-index: 2;
   top: 0;
 }
 
@@ -86,7 +108,7 @@ header {
 #targets {
   display: none;
   position: relative;
-  height: 75%;
+  height: 50%;
   width: 75%;
 }
 
@@ -109,6 +131,7 @@ header {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  
 }
 
 .target {
@@ -120,7 +143,6 @@ header {
   height: 200px;
   background-color: white;
   border-radius: 50%;
-  z-index: 1;
 }
 
 .ring1 {
@@ -129,7 +151,7 @@ header {
   height: 85%;
   background-color: firebrick;
   border-radius: 50%;
-  z-index: 2;
+
 }
 
 .ring2 {
@@ -138,7 +160,7 @@ header {
   height: 70%;
   background-color: white;
   border-radius: 50%;
-  z-index: 3;
+
 }
 
 .ring3 {
@@ -147,7 +169,7 @@ header {
   height: 55%;
   background-color: firebrick;
   border-radius: 50%;
-  z-index: 4;
+
 }
 
 .ring4 {
@@ -156,7 +178,7 @@ header {
   height: 40%;
   background-color: white;
   border-radius: 50%;
-  z-index: 5;
+
 }
 
 .ring5 {
@@ -165,7 +187,7 @@ header {
   height: 20%;
   background-color: firebrick;
   border-radius: 50%;
-  z-index: 6;
+
 }
 
 .hideTarget {
@@ -212,3 +234,276 @@ header {
   color: white;
   bottom: 5vh;
 }
+
+
+
+
+
+
+/* .topLeftDifficulty1Variation {
+
+} */
+.topLeftDifficulty2Variation1 {
+  animation: moveRight .75s;
+  animation-fill-mode: both;
+  
+}
+.topLeftDifficulty2Variation2 {
+  animation: moveDown .75s;
+  animation-fill-mode: both;
+}
+.topLeftDifficulty2Variation3 {
+  animation: moveRightAndDown .75s;
+  animation-fill-mode: both;
+}
+
+
+.topLeftDifficulty3Variation1 {
+  animation: curveRightFromBelow linear .5s;
+  animation-fill-mode: both;
+}
+.topLeftDifficulty3Variation2 {
+  animation: curveRightFromBelow linear .5s;
+  animation-fill-mode: both;
+}
+.topLeftDifficulty3Variation3 {
+  animation: curveRightFromBelow linear .5s;
+  animation-fill-mode: both;
+}
+
+
+
+
+
+/* .topRightDifficulty1Variation {
+
+} */
+.topRightDifficulty2Variation1 {
+  animation: moveLeft .75s ;
+  animation-fill-mode: both;
+}
+.topRightDifficulty2Variation2 {
+  animation: moveDown .75s;
+  animation-fill-mode: both;
+}
+.topRightDifficulty2Variation3 {
+  animation: moveLeftAndDown .75s;
+  animation-fill-mode: both;
+}
+
+
+
+.topRightDifficulty3Variation1 {
+  animation: curveLeftFromBelow linear .5s;
+  animation-fill-mode: both;
+
+}
+.topRightDifficulty3Variation2 {
+  animation: curveLeftFromBelow linear .5s;
+  animation-fill-mode: both;
+
+
+}
+.topRightDifficulty3Variation3 {
+  animation: curveLeftFromBelow linear .5s;
+  animation-fill-mode: both;
+
+
+}
+
+
+
+
+
+/* .bottomLeftDifficulty1Variation{
+
+} */
+.bottomLeftDifficulty2Variation1{
+  animation: moveRight .75s ;
+  animation-fill-mode: both;
+}
+.bottomLeftDifficulty2Variation2{
+  animation: moveUp .75s ;
+  animation-fill-mode: both;
+}
+.bottomLeftDifficulty2Variation3{
+  animation: moveRightAndUp .75s;
+  animation-fill-mode: both;
+}
+
+
+.bottomLeftDifficulty3Variation1{
+  animation: curveRightFromAbove linear .5s;
+  animation-fill-mode: both;
+
+
+}
+.bottomLeftDifficulty3Variation2{
+  animation: curveRightFromAbove linear .5s;
+  animation-fill-mode: both;
+
+
+}
+.bottomLeftDifficulty3Variation3{
+  animation: curveRightFromAbove linear .5s;
+  animation-fill-mode: both;
+
+
+}
+
+
+
+
+/* .bottomRightDifficulty1Variation{
+
+} */
+.bottomRightDifficulty2Variation1{
+  animation: moveLeft .75s;
+  animation-fill-mode: both;
+}
+.bottomRightDifficulty2Variation2{
+  animation: moveUp .75s;
+  animation-fill-mode: both;
+}
+.bottomRightDifficulty2Variation3{
+  animation: moveLeftAndUp .75s;
+  animation-fill-mode: both;
+}
+
+
+
+.bottomRightDifficulty3Variation1{
+  animation: curveLeftFromAbove linear .5s;
+  animation-fill-mode: both;
+
+
+}
+.bottomRightDifficulty3Variation2{
+  animation: curveLeftFromAbove linear .5s;
+  animation-fill-mode: both;
+
+
+}
+.bottomRightDifficulty3Variation3{
+  animation: curveLeftFromAbove linear .5s;
+  animation-fill-mode: both;
+
+
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0vw);
+  }
+
+  100% {
+    transform: translateX(30vw);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0vw);
+  }
+
+  100% {
+    transform: translateX(-30vw);
+  }
+}
+@keyframes moveUp {
+  0% {
+    transform: translateY(0vh);
+  }
+
+  100% {
+    transform: translateY(-30vh);
+  }
+}
+@keyframes moveDown {
+  0% {
+    transform: translateY(0vh);
+  }
+
+  100% {
+    transform: translateY(30vh);
+  }
+}
+@keyframes moveRightAndUp {
+  0% {
+    transform: translateX(0vw) translateY(0vh);
+  }
+
+  100% {
+    transform: translateX(20vw) translateY(-30vh);
+  }
+}
+@keyframes moveRightAndDown {
+  0% {
+    transform: translateX(0vw) translateY(0vh);
+  }
+
+  100% {
+    transform: translateX(20vw) translateY(30vh);
+  }
+}
+@keyframes moveLeftAndUp {
+  0% {
+    transform: translateX(0vw) translateY(0vh);
+  }
+
+  100% {
+    transform: translateX(-20vw) translateY(-30vh);
+  }
+}
+@keyframes moveLeftAndDown {
+  0% {
+    transform: translateX(0vw) translateY(0vh);
+  }
+
+  100% {
+    transform: translateX(-20vw) translateY(30vh);
+  }
+}
+
+
+
+
+
+@keyframes curveRightFromBelow {
+    0% {
+      transform: rotate(90deg) translateX(15vw) ;
+    }
+  
+    100% {
+      transform: rotate(0deg) translateX(15vw);
+    }
+  }
+@keyframes curveRightFromAbove {
+    0% {
+      transform: rotate(-90deg) translateX(15vw) ;
+    }
+  
+    100% {
+      transform: rotate(0deg) translateX(15vw);
+    }
+  }
+
+
+  @keyframes curveLeftFromBelow {
+    0% {
+      transform: rotate(90deg) translateX(-15vw) ;
+    }
+  
+    100% {
+      transform: rotate(0deg) translateX(-15vw);
+    }
+  }
+@keyframes curveLeftFromAbove {
+    0% {
+      transform: rotate(-90deg) translateX(-15vw) ;
+    }
+  
+    100% {
+      transform: rotate(0deg) translateX(-15vw);
+    }
+  }

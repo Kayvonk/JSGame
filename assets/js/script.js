@@ -9,6 +9,8 @@ let header = document.querySelector("header");
 let main = document.querySelector("main");
 let startCountdownDiv = document.getElementById("startCountdown");
 let gameTimerDiv = document.getElementById("gameTimer");
+let difficultySelect = document.getElementById("difficulty");
+let difficultyText = document.getElementById("difficultyText");
 
 let hitsDiv = document.getElementById("hits");
 let missesDiv = document.getElementById("misses");
@@ -21,12 +23,28 @@ let score = 0;
 let highScore = 0;
 let hits = 0;
 
-arrayOfInsults = [
-  "Can you do better?",
-  "Um...okay",
-  "omg, that was okay, I guess",
-  "Heeheehee, good try",
-];
+let difficulty;
+
+let leftDisplacement;
+let topDisplacement;
+
+let createTargetsSpeed;
+let targetDissapearTime;
+let targetZIndex;
+arrayOfInsults = ["You can do better?", "Um...nice", "Heeheehee, good try"];
+
+const setDifficulty = () => {
+  if (difficulty == 1) {
+    createTargetsSpeed = 750;
+    targetDissapearTime = 750;
+  } else if (difficulty == 2) {
+    createTargetsSpeed = 750;
+    targetDissapearTime = 750;
+  } else if (difficulty == 3) {
+    createTargetsSpeed = 750;
+    targetDissapearTime = 750;
+  }
+};
 
 const updateScore = () => {
   scoreDiv.textContent = "SCORE: " + score;
@@ -74,40 +92,144 @@ const headerTarget = () => {
 headerTarget();
 
 const createTarget = () => {
-  let targetDiv = document.createElement("div");
-  targetDiv.className = "targetDiv";
-  targetDiv.style.left = 100 * Math.random() + "%";
-  targetDiv.style.top = 100 * Math.random() + "%";
-  targetsContainer.append(targetDiv);
-  let target = document.createElement("div");
-  target.className = "target";
-  targetDiv.append(target);
-  let ring1 = document.createElement("div");
-  ring1.className = "ring1";
-  targetDiv.append(ring1);
-  let ring2 = document.createElement("div");
-  ring2.className = "ring2";
-  targetDiv.append(ring2);
+  targetZIndex += 1;
+  console.log("createTargetsSpeed: " + createTargetsSpeed);
+  console.log("targetDissapearTime: " + targetDissapearTime);
+  let createTargetInterval = setInterval(() => {
+    let targetDiv = document.createElement("div");
+    leftDisplacement = 100 * Math.random();
+    topDisplacement = 100 * Math.random();
+    targetDiv.style.left = leftDisplacement + "%";
+    targetDiv.style.top = topDisplacement + "%";
+    targetDiv.style.zIndex = targetZIndex;
+    if (leftDisplacement < 50 && topDisplacement < 50 && difficulty == 1) {
+      targetDiv.className =
+        "targetDiv topLeftDifficulty1Variation" +
+        (Math.floor(Math.random() * 3) + 1);
+    } else if (
+      leftDisplacement >= 50 &&
+      topDisplacement <= 50 &&
+      difficulty == 1
+    ) {
+      targetDiv.className =
+        "targetDiv topRightDifficulty1Variation" +
+        (Math.floor(Math.random() * 3) + 1);
+    } else if (
+      leftDisplacement <= 50 &&
+      topDisplacement >= 50 &&
+      difficulty == 1
+    ) {
+      targetDiv.className =
+        "targetDiv bottomLeftDifficulty1Variation" +
+        (Math.floor(Math.random() * 3) + 1);
+    } else if (
+      leftDisplacement >= 50 &&
+      topDisplacement >= 50 &&
+      difficulty == 1
+    ) {
+      targetDiv.className =
+        "targetDiv bottomRightDifficulty1Variation" +
+        (Math.floor(Math.random() * 3) + 1);
+    } else if (
+      leftDisplacement <= 50 &&
+      topDisplacement <= 50 &&
+      difficulty == 2
+    ) {
+      targetDiv.className =
+        "targetDiv topLeftDifficulty2Variation" +
+        (Math.floor(Math.random() * 3) + 1);
+    } else if (
+      leftDisplacement >= 50 &&
+      topDisplacement <= 50 &&
+      difficulty == 2
+    ) {
+      targetDiv.className =
+        "targetDiv topRightDifficulty2Variation" +
+        (Math.floor(Math.random() * 3) + 1);
+    } else if (
+      leftDisplacement <= 50 &&
+      topDisplacement >= 50 &&
+      difficulty == 2
+    ) {
+      targetDiv.className =
+        "targetDiv bottomLeftDifficulty2Variation" +
+        (Math.floor(Math.random() * 3) + 1);
+    } else if (
+      leftDisplacement >= 50 &&
+      topDisplacement >= 50 &&
+      difficulty == 2
+    ) {
+      targetDiv.className =
+        "targetDiv bottomRightDifficulty2Variation" +
+        (Math.floor(Math.random() * 3) + 1);
+    } else if (
+      leftDisplacement <= 50 &&
+      topDisplacement <= 50 &&
+      difficulty == 3
+    ) {
+      targetDiv.className =
+        "targetDiv topLeftDifficulty3Variation" +
+        (Math.floor(Math.random() * 2) + 1);
+    } else if (
+      leftDisplacement >= 50 &&
+      topDisplacement <= 50 &&
+      difficulty == 3
+    ) {
+      targetDiv.className =
+        "targetDiv topRightDifficulty3Variation" +
+        (Math.floor(Math.random() * 2) + 1);
+    } else if (
+      leftDisplacement <= 50 &&
+      topDisplacement >= 50 &&
+      difficulty == 3
+    ) {
+      targetDiv.className =
+        "targetDiv bottomLeftDifficulty3Variation" +
+        (Math.floor(Math.random() * 2) + 1);
+    } else if (
+      leftDisplacement >= 50 &&
+      topDisplacement >= 50 &&
+      difficulty == 3
+    ) {
+      targetDiv.className =
+        "targetDiv bottomRightDifficulty3Variation" +
+        (Math.floor(Math.random() * 2) + 1);
+    }
+    targetsContainer.append(targetDiv);
+    let target = document.createElement("div");
+    target.className = "target";
+    targetDiv.append(target);
+    let ring1 = document.createElement("div");
+    ring1.className = "ring1";
+    targetDiv.append(ring1);
+    let ring2 = document.createElement("div");
+    ring2.className = "ring2";
+    targetDiv.append(ring2);
 
-  let ring3 = document.createElement("div");
-  ring3.className = "ring3";
-  targetDiv.append(ring3);
+    let ring3 = document.createElement("div");
+    ring3.className = "ring3";
+    targetDiv.append(ring3);
 
-  let ring4 = document.createElement("div");
-  ring4.className = "ring4";
-  targetDiv.append(ring4);
+    let ring4 = document.createElement("div");
+    ring4.className = "ring4";
+    targetDiv.append(ring4);
 
-  let ring5 = document.createElement("div");
-  ring5.className = "ring5";
-  targetDiv.append(ring5);
-  setTimeout(() => {
-    targetDiv.remove();
-  }, 750);
+    let ring5 = document.createElement("div");
+    ring5.className = "ring5";
+    targetDiv.append(ring5);
+    setTimeout(() => {
+      targetDiv.remove();
+    }, targetDissapearTime);
+
+    if (gameTimer === 0) {
+      clearInterval(createTargetInterval);
+    }
+  }, createTargetsSpeed);
 };
 
 const generateTargets = () => {
+  createTarget();
   let targetInterval = setInterval(() => {
-    createTarget();
     gameTimer--;
     gameTimerDiv.textContent = gameTimer;
 
@@ -119,11 +241,13 @@ const generateTargets = () => {
         console.log("highScore: " + highScore);
         localStorage.setItem("High Score", highScore);
       }
+      targetZIndex = 0;
+      difficultyText.style = "display:block";
+      difficultySelect.style = "display:block";
       startTimerContainer.style = "display:none";
       targetsContainer.style = "display:none";
       playAgainBtn.style = "display:block";
       gameTimerDiv.style = "display:none";
-      gameTimer = 10;
       clearInterval(targetInterval);
     }
   }, 1000);
@@ -142,6 +266,7 @@ const startGame = () => {
   console.log("Start");
   hits = 0;
   score = 0;
+  gameTimer = 10;
   hitsDiv.textContent = "HITS: " + hits;
   scoreDiv.textContent = "SCORE: " + score;
   gameTimerDiv.textContent = gameTimer;
@@ -152,7 +277,12 @@ const startGame = () => {
   gameUiDiv.style = "display:flex";
   gameTimerDiv.style = "display:none";
   playAgainBtn.style = "display:none";
+  difficultySelect.style = "display:none";
+  difficultyText.style = "display:none";
   startTimerContainer.style = "display:flex";
+  difficulty = difficultySelect.value;
+  console.log(difficulty);
+  setDifficulty();
   countdown();
 };
 
@@ -170,7 +300,6 @@ const countdown = () => {
       startTimerContainer.style = "display: none";
       header.style = "display: none";
       targetsContainer.style = "display:flex";
-      main.style = "flex-direction: row";
       count = 3;
       gameTimerDiv.textContent = gameTimer;
       generateTargets();
@@ -182,40 +311,62 @@ const countdown = () => {
 };
 
 $(document).ready(function () {
-  $(document).on("click", ".target", function () {
+  $(document).on("mousedown", ".target", function () {
+    console.log("mousedowned target");
     $(this).parent().remove();
     score += 10;
     hits += 1;
     updateScore();
+    $(this).off("mousedown");
   });
-  $(document).on("click", ".ring1", function () {
+  $(document).on("mousedown", ".ring1", function () {
+    console.log("mousedowned ring1");
+
     $(this).parent().remove();
     score += 20;
     hits += 1;
     updateScore();
+    $(this).off("mousedown");
   });
-  $(document).on("click", ".ring2", function () {
+  $(document).on("mousedown", ".ring2", function () {
+    console.log("mousedowned ring2");
+
     $(this).parent().remove();
     score += 30;
     hits += 1;
     updateScore();
+    $(this).off("mousedown");
   });
-  $(document).on("click", ".ring3", function () {
+  $(document).on("mousedown", ".ring3", function () {
+    console.log("mousedowned ring3");
+
     $(this).parent().remove();
     score += 40;
     hits += 1;
     updateScore();
+    $(this).off("mousedown");
   });
-  $(document).on("click", ".ring4", function () {
+  $(document).on("mousedown", ".ring4", function () {
+    console.log("mousedowned ring4");
+
     $(this).parent().remove();
     score += 50;
     hits += 1;
     updateScore();
+    $(this).off("mousedown");
   });
-  $(document).on("click", ".ring5", function () {
+  $(document).on("mousedown", ".ring5", function () {
+    console.log("mousedowned ring5");
+
     $(this).parent().remove();
     score += 100;
     hits += 1;
     updateScore();
+    $(this).off("mousedown");
   });
 });
+
+//targets persisting on level two (cause: time for dissappear needs to be under 3 seconds)
+
+//circular motion animation for difficulty 3
+//or do something else
