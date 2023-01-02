@@ -36,10 +36,10 @@ arrayOfInsults = ["You can do better?", "Um...nice", "Heeheehee, good try"];
 const setDifficulty = () => {
   if (difficulty == 1) {
     createTargetsSpeed = 750;
-    targetDissapearTime = 750;
+    targetDissapearTime = 1000;
   } else if (difficulty == 2) {
     createTargetsSpeed = 750;
-    targetDissapearTime = 750;
+    targetDissapearTime = 1000;
   } else if (difficulty == 3) {
     createTargetsSpeed = 750;
     targetDissapearTime = 750;
@@ -86,6 +86,12 @@ const headerTarget = () => {
   let ring5 = document.createElement("div");
   ring5.className = "ring5";
   target.append(ring5);
+  let ring6 = document.createElement("div");
+  ring6.className = "ring6";
+  target.append(ring6);
+  let ring7 = document.createElement("div");
+  ring7.className = "ring7";
+  target.append(ring7);
   headerTargetDiv.append(target);
 };
 
@@ -169,7 +175,7 @@ const createTarget = () => {
     ) {
       targetDiv.className =
         "targetDiv topLeftDifficulty3Variation" +
-        (Math.floor(Math.random() * 2) + 1);
+        (Math.floor(Math.random() * 5) + 1);
     } else if (
       leftDisplacement >= 50 &&
       topDisplacement <= 50 &&
@@ -177,7 +183,7 @@ const createTarget = () => {
     ) {
       targetDiv.className =
         "targetDiv topRightDifficulty3Variation" +
-        (Math.floor(Math.random() * 2) + 1);
+        (Math.floor(Math.random() * 5) + 1);
     } else if (
       leftDisplacement <= 50 &&
       topDisplacement >= 50 &&
@@ -185,7 +191,7 @@ const createTarget = () => {
     ) {
       targetDiv.className =
         "targetDiv bottomLeftDifficulty3Variation" +
-        (Math.floor(Math.random() * 2) + 1);
+        (Math.floor(Math.random() * 5) + 1);
     } else if (
       leftDisplacement >= 50 &&
       topDisplacement >= 50 &&
@@ -193,7 +199,7 @@ const createTarget = () => {
     ) {
       targetDiv.className =
         "targetDiv bottomRightDifficulty3Variation" +
-        (Math.floor(Math.random() * 2) + 1);
+        (Math.floor(Math.random() * 5) + 1);
     }
     targetsContainer.append(targetDiv);
     let target = document.createElement("div");
@@ -217,6 +223,12 @@ const createTarget = () => {
     let ring5 = document.createElement("div");
     ring5.className = "ring5";
     targetDiv.append(ring5);
+    let ring6 = document.createElement("div");
+    ring6.className = "ring6";
+    targetDiv.append(ring6);
+    let ring7 = document.createElement("div");
+    ring7.className = "ring7";
+    targetDiv.append(ring7);
     setTimeout(() => {
       targetDiv.remove();
     }, targetDissapearTime);
@@ -357,6 +369,24 @@ $(document).ready(function () {
   });
   $(document).on("mousedown", ".ring5", function () {
     console.log("mousedowned ring5");
+
+    $(this).parent().remove();
+    score += 60;
+    hits += 1;
+    updateScore();
+    $(this).off("mousedown");
+  });
+  $(document).on("mousedown", ".ring6", function () {
+    console.log("mousedowned ring6");
+
+    $(this).parent().remove();
+    score += 75;
+    hits += 1;
+    updateScore();
+    $(this).off("mousedown");
+  });
+  $(document).on("mousedown", ".ring7", function () {
+    console.log("mousedowned ring7");
 
     $(this).parent().remove();
     score += 100;
