@@ -261,27 +261,27 @@ header {
 }
 
 .topLeftDifficulty3Variation1 {
-  animation: curveRightFromBelow linear 0.375s alternate;
+  animation: curveRightFromBelow linear .625s alternate;
   animation-iteration-count: 2;
   animation-fill-mode: both;
 }
 .topLeftDifficulty3Variation2 {
-  animation: curveDownFromRight linear 0.375s alternate;
+  animation: curveDownFromRight linear .625s alternate;
   animation-iteration-count: 2;
   animation-fill-mode: both;
 }
 .topLeftDifficulty3Variation3 {
-  animation: moveRight linear 0.375s alternate;
+  animation: moveRight linear .625s alternate;
   animation-iteration-count: 2;
   animation-fill-mode: both;
 }
 .topLeftDifficulty3Variation4 {
-  animation: moveDown linear 0.375s alternate;
+  animation: moveDown linear .625s alternate;
   animation-iteration-count: 2;
   animation-fill-mode: both;
 }
 .topLeftDifficulty3Variation5 {
-  animation: moveRightAndDown linear 0.375s alternate;
+  animation: moveRightAndDown linear .625s alternate;
   animation-iteration-count: 2;
   animation-fill-mode: both;
 }
@@ -303,29 +303,29 @@ header {
 }
 
 .topRightDifficulty3Variation1 {
-  animation: curveLeftFromBelow linear 0.375s alternate;
+  animation: curveLeftFromBelow linear .625s alternate;
   animation-iteration-count: 2;
 
   animation-fill-mode: both;
 }
 .topRightDifficulty3Variation2 {
-  animation: curveDownFromLeft linear 0.375s alternate;
+  animation: curveDownFromLeft linear .625s alternate;
   animation-iteration-count: 2;
 
   animation-fill-mode: both;
 }
 .topRightDifficulty3Variation3 {
-  animation: moveLeft linear 0.375s alternate;
+  animation: moveLeft linear .625s alternate;
   animation-iteration-count: 2;
   animation-fill-mode: both;
 }
 .topRightDifficulty3Variation4 {
-  animation: moveDown linear 0.375s alternate;
+  animation: moveDown linear .625s alternate;
   animation-iteration-count: 2;
   animation-fill-mode: both;
 }
 .topRightDifficulty3Variation5 {
-  animation: moveLeftAndDown linear 0.375s alternate;
+  animation: moveLeftAndDown linear .625s alternate;
   animation-iteration-count: 2;
   animation-fill-mode: both;
 }
@@ -334,40 +334,40 @@ header {
 
 } */
 .bottomLeftDifficulty2Variation1 {
-  animation: moveRight 0.75s;
+  animation: moveRight 1.25s;
   animation-fill-mode: both;
 }
 .bottomLeftDifficulty2Variation2 {
-  animation: moveUp 0.75s;
+  animation: moveUp 1.25s;
   animation-fill-mode: both;
 }
 .bottomLeftDifficulty2Variation3 {
-  animation: moveRightAndUp 0.75s;
+  animation: moveRightAndUp 1.25s;
   animation-fill-mode: both;
 }
 
 .bottomLeftDifficulty3Variation1 {
-  animation: curveRightFromAbove linear 0.375s alternate;
+  animation: curveRightFromAbove linear .625s alternate;
   animation-iteration-count: 2;
   animation-fill-mode: both;
 }
 .bottomLeftDifficulty3Variation2 {
-  animation: curveUpFromRight linear 0.375s alternate;
+  animation: curveUpFromRight linear .625s alternate;
   animation-iteration-count: 2;
   animation-fill-mode: both;
 }
 .bottomLeftDifficulty3Variation3 {
-  animation: moveRight linear 0.375s alternate;
+  animation: moveRight linear .625s alternate;
   animation-iteration-count: 2;
   animation-fill-mode: both;
 }
 .bottomLeftDifficulty3Variation4 {
-  animation: moveUp linear 0.375s alternate;
+  animation: moveUp linear .625s alternate;
   animation-iteration-count: 2;
   animation-fill-mode: both;
 }
 .bottomLeftDifficulty3Variation5 {
-  animation: moveRightAndUp linear 0.375s alternate;
+  animation: moveRightAndUp linear .625s alternate;
   animation-iteration-count: 2;
   animation-fill-mode: both;
 }
@@ -376,40 +376,40 @@ header {
 
 } */
 .bottomRightDifficulty2Variation1 {
-  animation: moveLeft 0.75s;
+  animation: moveLeft 1.25s;
   animation-fill-mode: both;
 }
 .bottomRightDifficulty2Variation2 {
-  animation: moveUp 0.75s;
+  animation: moveUp 1.25s;
   animation-fill-mode: both;
 }
 .bottomRightDifficulty2Variation3 {
-  animation: moveLeftAndUp 0.75s;
+  animation: moveLeftAndUp 1.25s;
   animation-fill-mode: both;
 }
 
 .bottomRightDifficulty3Variation1 {
-  animation: curveLeftFromAbove linear 0.375s alternate;
+  animation: curveLeftFromAbove linear .625s alternate;
   animation-iteration-count: 2;
   animation-fill-mode: both;
 }
 .bottomRightDifficulty3Variation2 {
-  animation: curveUpFromLeft linear 0.375s alternate;
+  animation: curveUpFromLeft linear .625s alternate;
   animation-iteration-count: 2;
   animation-fill-mode: both;
 }
 .bottomRightDifficulty3Variation3 {
-  animation: moveLeft linear 0.375s alternate;
+  animation: moveLeft linear .625s alternate;
   animation-iteration-count: 2;
   animation-fill-mode: both;
 }
 .bottomRightDifficulty3Variation4 {
-  animation: moveUp linear 0.375s alternate;
+  animation: moveUp linear .625s alternate;
   animation-iteration-count: 2;
   animation-fill-mode: both;
 }
 .bottomRightDifficulty3Variation5 {
-  animation: moveLeftAndUp linear 0.375s alternate;
+  animation: moveLeftAndUp linear .625s alternate;
   animation-iteration-count: 2;
   animation-fill-mode: both;
 }

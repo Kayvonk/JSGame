@@ -35,14 +35,14 @@ arrayOfInsults = ["You can do better?", "Um...nice", "Heeheehee, good try"];
 
 const setDifficulty = () => {
   if (difficulty == 1) {
-    createTargetsSpeed = 750;
-    targetDissapearTime = 1000;
+    createTargetsSpeed = 1250;
+    targetDissapearTime = 1500;
   } else if (difficulty == 2) {
-    createTargetsSpeed = 750;
-    targetDissapearTime = 1000;
+    createTargetsSpeed = 1250;
+    targetDissapearTime = 1250;
   } else if (difficulty == 3) {
     createTargetsSpeed = 750;
-    targetDissapearTime = 750;
+    targetDissapearTime = 1250;
   }
 };
 
@@ -395,8 +395,3 @@ $(document).ready(function () {
     $(this).off("mousedown");
   });
 });
-
-//targets persisting on level two (cause: time for dissappear needs to be under 3 seconds)
-
-//circular motion animation for difficulty 3
-//or do something else
